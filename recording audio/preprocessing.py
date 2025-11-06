@@ -4,11 +4,11 @@ import wave
 import librosa
 import soundfile as sf 
 
-raw_audio , sample_rate = librosa.load('../audio_files/micrecording_output.wav')
+raw_audio , sample_rate = librosa.load('audio_files/micrecording_output.wav')
 
 audio_trimmed,_ = librosa.effects.trim(raw_audio, top_db=35)
 
-sf.write('../audio_files/micrecording_output_trimmed.wav', audio_trimmed, sample_rate)
+sf.write('audio_files/micrecording_output_trimmed.wav', audio_trimmed, sample_rate)
 
 plt.figure(figsize=(15,5))
 

@@ -30,7 +30,7 @@ stream.stop_stream()
 stream.close()
 
 
-obj = wave.open('../audio_files/micrecording_output.wav', 'wb')
+obj = wave.open('audio_files/micrecording_output.wav', 'wb')
 obj.setframerate(sample_rate)
 obj.setnchannels(Channels)
 obj.setsampwidth(p.get_sample_size(Format))
