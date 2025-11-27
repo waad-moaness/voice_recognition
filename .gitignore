@@ -1,0 +1,7 @@
+vosk-model-small-en-us-0.15
+vosk-model-en-us-0.22
+archive
+test_audio_files
+test_audio_processed
+.ipynb_checkpoints
+audio_files
