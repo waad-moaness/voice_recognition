@@ -1,7 +1,7 @@
 import re
 import contractions
 from num2words import num2words
-
+import unicodedata
 text = "I'm in college now, and I'm testing the model against real noise."
 text2 = "I am in college now, and I am testing the model against real noise."
 t3= "Let's go to the café for a croissant."
@@ -12,8 +12,13 @@ ttt= "has it been a long time since i've talked"
 numstr = "the total is 19.99 $"
 numstr2 = "the total is nineteen point ninety nine "
 
+def remove_accents(text):
+    nfkd_form = unicodedata.normalize('NFKD', text)
+    return "".join([c for c in nfkd_form if not unicodedata.combining(c)])
+
 def text_preprocessing(text):
     text = text.lower().strip()
+    text = remove_accents(text)
     text = contractions.fix(text)
     # handle decimals 
     def convert_decimal(match):
