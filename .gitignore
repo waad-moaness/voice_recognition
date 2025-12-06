@@ -5,3 +5,4 @@ test_audio_files
 test_audio_processed
 .ipynb_checkpoints
 audio_files
+.bin
