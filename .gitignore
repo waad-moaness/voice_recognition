@@ -6,3 +6,5 @@ test_audio_processed
 .ipynb_checkpoints
 audio_files
 .bin
+final_test_audios
+__pycache__
